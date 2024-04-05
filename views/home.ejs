@@ -18,21 +18,29 @@
     <div class="container">
         <div class="main-section">
             <div class="title"><h2>Add Task</h2></div><br>
-            <div class="msg"></div>
-            <div class="user-input">
-                <input type="text" id="userItems" placeholder="Enter your today task" disabled="True">
+            <div class="msg">
+            </div>
+            <form action="/" method="post" class="user-input">
+                <input type="text" name="task" id="userItems" placeholder="Enter your today task" >
                 <button type="submit" id="btn" for="userItems">Submit</button>
-                <button type="submit" id="btn2" for="userItems">Add</button>
-            </div><br>
+                <!-- <button type="button" id="btn2" for="userItems">Add</button> -->
+            </form><br>
 
             <div class="tasks">
-                <h3>Task List</h3>
-                <div class="items-list"></div>
+                <h3>Task List<h4><%= (new Date()) %></h4></h3>
+                <div class="items-list">
+                    <% todotask.forEach(todo => { %>
+                        <div>
+                        <span><%= todo.task %></span>
+                        <a href="/del/<%= todo._id %>" >
+                            <button type="submit" class="btnEditOrDelete" for="item" id="delete" >Delete</button>
+                        </a>
+                        </div>
+                    <% }) %>
+                </div>
             </div>
-
         </div>
     </div>
-    <script src="/js/script.js"></script>
 </body>
 
 </html>

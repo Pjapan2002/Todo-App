@@ -1,11 +1,16 @@
 const express = require("express");
-const {handlePost} = require("../controller/todo");
+const {handlePost, handleDelete,handleEdit} = require("../controller/todo");
+const User = require("../model/todo");
 const routes = express.Router();
 
-routes.get('/', (req,res) => {
-    return res.render("home");
+routes.get('', async (req,res) => {
+    const allTask = await User.find({});
+    return res.render("home",{todotask : allTask});
 });
 
-routes.post("/", handlePost);
+routes.post("", handlePost);
+
+routes.get("/del/:id", handleDelete);
+
 
 module.exports = routes;
