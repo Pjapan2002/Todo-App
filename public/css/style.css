@@ -93,6 +93,9 @@ span{
     background-color: #fff;
 }
 
+.hide{
+    display: none;
+}
 @media screen and (max-width:500px){
     body{
         padding: 20px 10%;
