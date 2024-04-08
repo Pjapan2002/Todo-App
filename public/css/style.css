@@ -11,10 +11,12 @@ body{
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 header{
     max-width: 500px;
+    /* text-align: center; */
     color: #212121;
     margin: 1em auto;
 }
@@ -28,6 +30,17 @@ header{
 
 .msg{
     color: rgb(33, 148, 7);
+}
+
+.tasks{
+    width: 80%;
+    
+}
+.tasks h3 div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
 }
 
 .user-input input{
@@ -64,6 +77,7 @@ header{
 
 .items-list{
     height: 62vh;
+    /* width: 50%; */
     overflow: scroll;
     overflow-x: none;
     scroll-behavior: smooth;
@@ -78,7 +92,7 @@ header{
     background-color: rgba(255, 255, 0, 0.241);
     padding: 10px;
     max-width: 500px;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 .items-list div button{
     display: inline-block;
@@ -86,7 +100,7 @@ header{
 span{
     margin: 10px auto;
     font-size: 1rem;
-    display: block;
+    display: inline-block;
     width: 100%;
 }
 .btnEditOrDelete{

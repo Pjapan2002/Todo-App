@@ -1,10 +1,10 @@
 const express = require("express");
 const {handlePost, handleDelete, handleEdit} = require("../controller/todo");
-const User = require("../model/todo");
+const todos = require("../model/todo");
 const routes = express.Router();
 
 routes.get('', async (req,res) => {
-    const allTask = await User.find({});
+    const allTask = await todos.find({});
     return res.render("home",{todotask : allTask});
 });
 

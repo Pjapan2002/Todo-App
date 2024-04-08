@@ -1,4 +1,3 @@
-const todo = require("../model/todo");
 const User = require("../model/todo");
 
 // creating new task, and uploaded on database

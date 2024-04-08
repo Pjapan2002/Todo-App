@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="nav-bar">
-            <h1>ToDo Lists Application</h1>
+            <h1>ToDo App</h1>
         </div>
     </header>
 
@@ -21,7 +21,7 @@
             <div class="msg">
             </div>
 
-            <div id="Submit-form">
+            <div id="Submit-form" class="">
                 <form action="/" method="post" class="user-input">
                     <input type="text" name="task" id="userItems" placeholder="Enter your today task" >
                     <button type="submit" id="btn" for="userItems">Submit</button>
@@ -38,11 +38,16 @@
             </div>
 
             <div class="tasks">
-                <h3>Task List<h4><%= (new Date()) %></h4></h3>
+                <h3>Task List
+                    <div>
+                        <h4 id="currentDate"></h4>
+                        <h4 id="time"></h4>
+                    </div>
+                </h3>
                 <div class="items-list" id="task_list">
                     <% todotask.forEach(todo => { %>
                         <div>
-                        <span><%= todo.task %></span>
+                        <span><input type="checkbox" id="userStatus"> <%= todo.task %></span>
                         <a href="/del/<%= todo._id %>" >
                             <button type="submit" class="btnEditOrDelete" for="item" id=<%= todo._id %> >Delete</button>
                         </a>

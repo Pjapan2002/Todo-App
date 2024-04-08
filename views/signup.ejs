@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/css/signupStyle.css">
+</head>
+
+<body>
+    <div class="conatainer">
+        <h1>Sign up</h1>
+        <form action="/user" method="post">
+            <input type="text" name="name" placeholder="Name" required>
+            <span>
+                <label for="gender">Gender: </label>
+                <input type="radio" name="gender" id="gender" value="Male"> <label for="gender">Male</label>
+                <input type="radio" name="gender" id="gender" value="Female"> <label for="gender">Female</label>
+            </span>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
